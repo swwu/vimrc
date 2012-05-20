@@ -55,7 +55,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " color scheme
-colors ir_black
+colorscheme wombat
 
 set list          " highlight whitespace
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
