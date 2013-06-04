@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/swwu/.vim'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/swwu/actual-mapar/node_modules'
+let g:netrw_dirhist_2='/home/swwu/analytics-worker/test'
+let g:netrw_dirhist_3='/home/swwu/storage-lib/test'
+let g:netrw_dirhist_4='/home/swwu/client-frontend/js'
