@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/swwu/actual-mapar/node_modules'
 let g:netrw_dirhist_2='/home/swwu/analytics-worker/test'
 let g:netrw_dirhist_3='/home/swwu/storage-lib/test'
 let g:netrw_dirhist_4='/home/swwu/client-frontend/js'
 let g:netrw_dirhist_5='/home/swwu/websitev2/css'
 let g:netrw_dirhist_6='/home/swwu/Cataclysm-DDA/code_doc'
+let g:netrw_dirhist_7='/home/swwu/register/js'
+let g:netrw_dirhist_8='/home/swwu/websitev2/css'
+let g:netrw_dirhist_9='/home/swwu/vimrc/.vim'

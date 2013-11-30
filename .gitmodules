@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-cpp11"]
+	path = .vim/bundle/vim-cpp11
+	url = git@github.com:vim-scripts/Cpp11-Syntax-Support.git

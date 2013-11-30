@@ -88,6 +88,7 @@ nmap ,ca :VCSAdd<CR>
 nmap ,cd :VCSDiff<CR>
 
 " lightline config
+set noshowmode
 set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -108,3 +109,9 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+autocmd BufRead,BufNewFile *.cpp call SetCppOptions()
+function SetCppOptions()
+  set filetype=cpp11
+  set shiftwidth=4
+endfunction
