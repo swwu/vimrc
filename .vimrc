@@ -16,7 +16,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 set hidden
 
 set nowrap        " don't wrap lines
-set tabstop=2     " a tab is four spaces
+set tabstop=2     " a tab is two spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
@@ -56,6 +56,8 @@ endif
 
 " color scheme
 colorscheme ir_black
+
+hi SpecialKey ctermfg=235 guifg=#333333
 
 set list          " highlight whitespace
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
@@ -110,8 +112,11 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
 
-autocmd BufRead,BufNewFile *.cpp call SetCppOptions()
-function SetCppOptions()
-  set filetype=cpp11
-  set shiftwidth=4
-endfunction
+"autocmd BufRead,BufNewFile *.cpp call SetCppOptions()
+"function SetCppOptions()
+"  set filetype=cpp11
+"  set shiftwidth=4
+"endfunction
+
+" mac stuff
+set clipboard=unnamed

@@ -22,3 +22,9 @@
 [submodule ".vim/bundle/vim-cpp11"]
 	path = .vim/bundle/vim-cpp11
 	url = git@github.com:vim-scripts/Cpp11-Syntax-Support.git
+[submodule ".vim/bundle/vim-scala"]
+	path = .vim/bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = git@github.com:fatih/vim-go.git
