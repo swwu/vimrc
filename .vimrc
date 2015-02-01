@@ -78,7 +78,6 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-
 " NERD tree mappings
 nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap ,m :NERDTreeClose<CR>:NERDTreeFind<CR>
@@ -88,6 +87,12 @@ nmap ,N :NERDTreeClose<CR>
 nmap ,cc :VCSCommit<CR>
 nmap ,ca :VCSAdd<CR>
 nmap ,cd :VCSDiff<CR>
+
+" rainbow parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " lightline config
 set noshowmode

@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-go"]
 	path = .vim/bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule ".vim/bundle/rainbow_parentheses"]
+	path = .vim/bundle/rainbow_parentheses
+	url = git@github.com:kien/rainbow_parentheses.vim.git
