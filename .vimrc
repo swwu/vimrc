@@ -1,9 +1,70 @@
 " This must be first, because it changes other options as side effect
 set nocompatible
 
-" Use pathogen to easily modify the runtime path to include all
-" plugins under the ~/.vim/bundle directory
-call pathogen#infect()
+" Vundle magic
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fireplace'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+
+Plugin 'itchyny/lightline.vim'
+
+"syntax highlighting
+Plugin 'rmartinho/vim-cpp11'
+Plugin 'groenewege/vim-less'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'fatih/vim-go'
+
+Plugin 'luochen1990/rainbow'
+
+call vundle#end()            " required
+
+let g:rainbow_conf = {
+\	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+\	'ctermfgs': ['cyan', 'yellow', 'red', 'magenta'],
+\	'operators': '_,_',
+\	'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+\	'separately': {
+\		'*': {},
+\		'tex': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+\		},
+\		'clojure': {
+\			'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick', 'darkorchid3'],
+\		},
+\		'vim': {
+\			'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+\		},
+\		'xml': {
+\			'parentheses': ['start=/\v\<\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'))?)*\>/ end=#</\z1># fold'],
+\		},
+\		'xhtml': {
+\			'parentheses': ['start=/\v\<\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'))?)*\>/ end=#</\z1># fold'],
+\		},
+\		'html': {
+\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+\		},
+\		'php': {
+\			'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold', 'start=/(/ end=/)/ containedin=@htmlPreproc contains=@phpClTop', 'start=/\[/ end=/\]/ containedin=@htmlPreproc contains=@phpClTop', 'start=/{/ end=/}/ containedin=@htmlPreproc contains=@phpClTop'],
+\		},
+\		'css': 0,
+\	}
+\}
+syntax on
+let g:rainbow_active = 1
+
+:map <F3> :RainbowToggle<CR>
+
 
 " change the mapleader from \ to ,
 let mapleader=","
@@ -43,6 +104,8 @@ set textwidth=78  " wrap at 80
 filetype on
 filetype plugin on
 filetype indent on
+
+let NERDTreeShowHidden=1
 
 " add filetype mappings for new files
 au BufNewFile,BufRead *.clj set filetype=clojure
@@ -84,17 +147,6 @@ nmap ,n :NERDTreeClose<CR>:NERDTreeToggle<CR>
 nmap ,m :NERDTreeClose<CR>:NERDTreeFind<CR>
 nmap ,N :NERDTreeClose<CR>
 
-" VCS command mappings
-nmap ,cc :VCSCommit<CR>
-nmap ,ca :VCSAdd<CR>
-nmap ,cd :VCSDiff<CR>
-
-" rainbow parens
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-
 " lightline config
 set noshowmode
 set laststatus=2
@@ -126,7 +178,7 @@ let g:lightline = {
 
 " mac stuff
 set clipboard=unnamed
-set transparency=20
+"set transparency=20
 
 " ctrlp config
 let g:ctrlp_map = '<c-p>'
@@ -143,3 +195,5 @@ endif
 " make NERDtree and ctrlp share root directories
 let g:NERDTreeChDirMode = 2
 let g:ctrlp_working_path_mode = 'rw'
+
+

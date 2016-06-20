@@ -1,4 +1,5 @@
 
 1) Move .vimrc and .vim into home directory
-2) Profit
+2) Install with Vundle: `vim +PluginInstall +qall`
+3) Profit
 
