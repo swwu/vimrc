@@ -1,5 +1,6 @@
 
 1) Move .vimrc and .vim into home directory
-2) Install with Vundle: `vim +PluginInstall +qall`
+1b) For neovim: symlink ~/.vim to ~/.config/nvim
+2) Install plugins with VimPlug: run `:PlugInstall` after loading vim
 3) Profit
 

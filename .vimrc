@@ -32,6 +32,8 @@ Plug 'groenewege/vim-less'
 Plug 'plasticboy/vim-markdown'
 Plug 'fatih/vim-go'
 
+Plug 'airblade/vim-rooter'
+
 Plug 'junegunn/rainbow_parentheses.vim'
 
 call plug#end() " required
